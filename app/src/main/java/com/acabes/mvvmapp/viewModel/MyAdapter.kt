@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.acabes.mvvmapp.R
 import com.acabes.mvvmapp.model.HarryPotterCharacter
+import com.squareup.picasso.Picasso
 
 class MyAdapter(private val items: List<HarryPotterCharacter>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
@@ -16,6 +17,10 @@ class MyAdapter(private val items: List<HarryPotterCharacter>) : RecyclerView.Ad
         val charName=itemView.findViewById<TextView>(R.id.item_name)
         val species=itemView.findViewById<TextView>(R.id.item_species)
         val wizard=itemView.findViewById<TextView>(R.id.item_wizard)
+        val student=itemView.findViewById<TextView>(R.id.item_student)
+        val staff=itemView.findViewById<TextView>(R.id.item_staff)
+        val house=itemView.findViewById<TextView>(R.id.item_house)
+        val ancestry=itemView.findViewById<TextView>(R.id.item_ancestry)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter.ViewHolder {
@@ -25,14 +30,18 @@ class MyAdapter(private val items: List<HarryPotterCharacter>) : RecyclerView.Ad
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item=items[position]
+        val errorImg=R.drawable.error
         holder.charName.text=item.name
         holder.species.text=item.species
+        holder.ancestry.text=item.ancestry
+        holder.student.text=item.hogwartsStudent
+        holder.house.text=item.house
+        holder.staff.text=item.hogwartsStaff
         holder.wizard.text=item.wizard.toString()
-
-//        Picasso.get()
-//            .load(item.url)
-//            .into(holder.image)
-//        holder.image.let { it.loadImage(item.url) }
+        Picasso.get()
+            .load(item.image)
+            .error(errorImg)
+            .into(holder.image)
     }
 
     override fun getItemCount(): Int =items.size

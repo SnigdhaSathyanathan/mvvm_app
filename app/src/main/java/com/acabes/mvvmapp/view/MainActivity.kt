@@ -19,16 +19,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        val recyclerView:RecyclerView=findViewById(R.id.recyclerView)
-        recyclerView.layoutManager=LinearLayoutManager(this)
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        var viewmodel:MyViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
-       runOnUiThread {
-           viewmodel.display()
-           viewmodel.hogwartsCharacters.observe(this,{result->
-               var adapter=MyAdapter(result)
-               recyclerView.adapter=adapter
-           })
-       }
+        var viewmodel: MyViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
+
+        viewmodel.display()
+        viewmodel.hogwartsCharacters.observe(this) { result ->
+            var adapter = MyAdapter(result)
+            recyclerView.adapter = adapter
+        }
+
+
     }
 }

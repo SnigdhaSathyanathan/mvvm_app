@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list_item"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#E821050F"
+    android:background="#D521050F"
     android:layout_margin="5dp"
     android:padding="7dp">
     <TextView
@@ -13,16 +13,16 @@
         android:layout_height="wrap_content"
         android:text="Harry Potter"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:fontFamily="cursive"
         android:textStyle="bold"
         android:textColor="#E4D3A0"></TextView>
     <ImageView
         android:id="@+id/item_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints="Image"
-        android:src="@color/white"></ImageView>
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_margin="3dp"
+        android:layout_gravity="center"></ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,17 +32,40 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAlignment="textEnd"
+            android:textSize="16dp"
             android:textColor="@color/white"
-            android:text="Species :"></TextView>
+            android:text="Species : "></TextView>
         <TextView
             android:id="@+id/item_species"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             android:layout_weight="1"
             android:textAlignment="textStart"
             android:textColor="@color/white"></TextView>
     </LinearLayout>
     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="textEnd"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:text="Ancestry : "></TextView>
+    <TextView
+        android:id="@+id/item_ancestry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_weight="1"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"></TextView>
+</LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -51,14 +74,80 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAlignment="textEnd"
+            android:textSize="16dp"
             android:textColor="@color/white"
-            android:text="Witch/Wizard :"></TextView>
+            android:text="Wizard : "></TextView>
         <TextView
             android:id="@+id/item_wizard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="16dp"
             android:textAlignment="textStart"
             android:textColor="@color/white"></TextView>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="House : "></TextView>
+        <TextView
+            android:id="@+id/item_house"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="Student : "></TextView>
+        <TextView
+            android:id="@+id/item_student"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="Staff : "></TextView>
+        <TextView
+            android:id="@+id/item_staff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"></TextView>
+    </LinearLayout>
+
 </LinearLayout>
